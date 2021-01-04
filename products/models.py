@@ -10,11 +10,7 @@ class Product(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE,)
 
     def __str__(self):
-        return self.name
-
-    @property
-    def display_price(self):
-        return f'PRK {self.price}'
+      return self.name
 
 
 class Category(models.Model):
@@ -22,4 +18,4 @@ class Category(models.Model):
     description = models.TextField()
 
     def __str__(self):
-        return self.name
+      return self.name
